@@ -1,0 +1,19 @@
+In the $(NAME): rule, you tell make how to build your final program.
+
+Concrete Objective:
+Inside the $(NAME): rule, put the command to compile all object files into the final executable.
+
+What to write: $(CC) $(CFLAGS) $(OBJS) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+
+Explanation:
+$(CC) — your compiler (like cc or gcc)
+$(CFLAGS) — your flags (like -Wall -Wextra -Werror)
+$(OBJS) — your compiled .o files
+-Lmlx -lmlx — link to the MiniLibX library (assuming it's in ./mlx)
+-framework OpenGL -framework AppKit — required frameworks on macOS
+-o $(NAME) — name of your final executable
+
+-Lmlx tells the linker where to look for libraries.
+It means: “Look in the mlx directory for libraries.”
+-lmlx tells the linker which library to link.
+It means: “Link against the library named mlx (libmlx.a or libmlx.dylib).”
