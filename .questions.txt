@@ -1,0 +1,1 @@
+1. why doesnt it work with when using docker or linux? and why would it give malloc error
