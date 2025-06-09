@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 20:40:00 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/06 00:59:45 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/09 09:57:38 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@
 # include <stdio.h>
 # include <string.h>
 # include <math.h>
-# include "mlx/mlx.h"
-# define WIDTH 800
-# define HEIGHT 800
+# include "minilibx/linux/mlx.h"
+# include "minilibx/opengl/mlx.h"
+# define WIDTH 400
+# define HEIGHT 400
 # define DEFAULT_AC 2
 # define JULIA_AC 4
 # define MANDELBROT 1
 # define JULIA 2
 # define JULIA_WITH_PARAMS 3
-# define MAX_ITER 100
+# define MAX_ITER 150
 
 # define ESC 53
 # define MOUSE_WHEEL_UP 4
