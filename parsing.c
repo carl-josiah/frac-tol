@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 13:53:17 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/03 15:32:48 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/09 15:03:56 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,14 @@ static int	is_valid_julia(char *param1, char *param2)
 
 int	which_fractal(int ac, char *fractal)
 {
-	if (ac == DEFAULT_AC && !fr_strncmp(fractal, "mandelbrot", 10))
+	if (ac == DEFAULT_AC && !fr_strncmp(fractal, "mandelbrot", 10)
+		&& fr_strlen(fractal) == 10)
 		return (MANDELBROT);
-	else if (ac == DEFAULT_AC && !fr_strncmp(fractal, "julia", 5))
+	else if (ac == DEFAULT_AC && !fr_strncmp(fractal, "julia", 5)
+		&& fr_strlen(fractal) == 5)
 		return (JULIA);
-	else if (ac == JULIA_AC && !fr_strncmp(fractal, "julia", 5))
+	else if (ac == JULIA_AC && !fr_strncmp(fractal, "julia", 5)
+		&& fr_strlen(fractal) == 5)
 		return (JULIA_WITH_PARAMS);
 	else
 		return (0);

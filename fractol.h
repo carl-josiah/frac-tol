@@ -6,19 +6,23 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 20:40:00 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/09 09:57:38 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/09 15:12:18 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-# include <math.h>
-# include "minilibx/linux/mlx.h"
-# include "minilibx/opengl/mlx.h"
+# ifdef __APPLE__
+#  include "minilibx_opengl_20191021/mlx.h"
+# else
+#  include "minilibx-linux/mlx.h"
+# endif
+
 # define WIDTH 400
 # define HEIGHT 400
 # define DEFAULT_AC 2

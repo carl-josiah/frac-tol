@@ -21,13 +21,13 @@ RM = rm -f
 UNAME = $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
-	MLX_FLAGS = -Lmlx -lmlx -framework OpenGL -framework Appkit
-	CFLAGS += -I./minilibx/opengl
-	MLX_DIR = minilibx/opengl
+	MLX_FLAGS = -Lminilibx_opengl_20191021 -lmlx -framework OpenGL -framework AppKit
+	CFLAGS += -I./minilibx_opengl_20191021
+	MLX_DIR = minilibx_opengl_20191021
 else ifeq ($(UNAME), Linux)
-	MLX_FLAGS = -Lminilibx/linux -lmlx_Linux -lX11 -lXext
-	CFLAGS += -I./minilibx/linux
-	MLX_DIR = minilibx/linux
+	MLX_FLAGS = -Lminilibx-linux -lmlx_Linux -lX11 -lXext
+	CFLAGS += -I./minilibx-linux
+	MLX_DIR = minilibx-linux
 endif
 
 all: $(NAME)
@@ -38,12 +38,11 @@ mlx:
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): mlx $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(MLX_FLAGS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)
-	$(MAKE) -C $(MLX_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
