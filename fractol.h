@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 20:40:00 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/10 17:04:48 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 17:49:46 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	my_mlx_pixel_put(t_img *img, int x, int y, int color);
 
 int		fr_strncmp(const char *s1, const char *s2, size_t n);
 size_t	fr_strlen(const char *str);
+void	fr_putstr(const char *str);
 double	fr_atod(const char *str);
 
 int		is_delim(char c);

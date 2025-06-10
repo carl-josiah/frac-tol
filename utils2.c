@@ -6,11 +6,21 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 16:22:27 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/05 23:00:59 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 17:49:13 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void	fr_putstr(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	write(1, str, i);
+}
 
 int	fr_strncmp(const char *s1, const char *s2, size_t n)
 {

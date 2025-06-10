@@ -6,15 +6,17 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:22:21 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/06 00:34:39 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 18:06:13 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-static void	malloc_error(void)
+static void	graphics_error(const char *str)
 {
-	perror("Error with malloc!\n");
+	fr_putstr(str);
+	fr_putstr("\n");
+	fr_putstr("Make sure to use a proper display environment\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -47,22 +49,23 @@ void	init_graphics(t_fractal *frac)
 {
 	frac->mlx = mlx_init();
 	if (!frac->mlx)
-		malloc_error();
+		graphics_error("mlx_init() failed.");
 	frac->mlx_win = mlx_new_window(frac->mlx, WIDTH, HEIGHT,
 			get_win_title(frac->type));
 	if (!frac->mlx_win)
-		malloc_error();
+		graphics_error("mlx_new_window() failed.");
 	frac->img.img_ptr = mlx_new_image(frac->mlx, WIDTH, HEIGHT);
 	if (!frac->img.img_ptr)
 	{
 		mlx_destroy_window(frac->mlx, frac->mlx_win);
-		malloc_error();
+		graphics_error("mlx_new_image() failed.");
 	}
 	frac->img.pix_ptr = mlx_get_data_addr(frac->img.img_ptr, &frac->img.bpp,
 			&frac->img.line_len, &frac->img.endian);
 	if (!frac->img.pix_ptr)
 	{
 		mlx_destroy_window(frac->mlx, frac->mlx_win);
-		malloc_error();
+		mlx_destroy_image(frac->mlx, frac->img.img_ptr);
+		graphics_error("mlx_get_data_addr() failed.");
 	}
 }
