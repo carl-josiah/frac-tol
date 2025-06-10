@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:20:21 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/09 14:56:06 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 17:04:48 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void	render_fractal(t_fractal *frac)
 		while (x < WIDTH)
 		{
 			color = get_color(pixel_to_iter(x, y, frac));
-			mlx_put_pixel(&frac->img, x, y, color);
+			my_mlx_pixel_put(&frac->img, x, y, color);
 			x++;
 		}
 		y++;

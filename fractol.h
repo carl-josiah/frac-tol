@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 20:40:00 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/09 15:48:22 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 17:04:48 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ typedef struct s_frac
 	double	off_y;
 }			t_fractal;
 
-void	mlx_put_pixel(t_img *img, int x, int y, int color);
+void	my_mlx_pixel_put(t_img *img, int x, int y, int color);
 
 int		fr_strncmp(const char *s1, const char *s2, size_t n);
 size_t	fr_strlen(const char *str);

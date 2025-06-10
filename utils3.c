@@ -6,13 +6,13 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 00:03:58 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/06 00:01:43 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 17:04:48 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	mlx_put_pixel(t_img *img, int x, int y, int color)
+void	my_mlx_pixel_put(t_img *img, int x, int y, int color)
 {
 	int	offset;
 
