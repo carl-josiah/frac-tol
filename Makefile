@@ -9,7 +9,6 @@ SRC		= fractol.c \
 		render.c \
 		handlers.c \
 
-
 OBJS	= $(SRC:.c=.o)
 
 CC		= cc
