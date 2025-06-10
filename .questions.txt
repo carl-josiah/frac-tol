@@ -1,1 +1,6 @@
-1. why doesnt it work with when using docker or linux? and why would it give malloc error
+1. what is fractol all about?
+2. what are fractals?
+3. what is the mandelbrot and the julia set?
+4. why can i put values in the julia set but not in mandelbrot set?
+5. what is minilibx and why do we use it?
+6. 
