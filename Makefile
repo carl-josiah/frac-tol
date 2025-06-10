@@ -7,7 +7,7 @@ SRC		= fractol.c \
 		parsing.c \
 		init.c \
 		render.c \
-		handlers.c \
+		handlers.c
 
 OBJS	= $(SRC:.c=.o)
 
