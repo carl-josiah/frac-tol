@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 20:40:00 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/10 17:49:46 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/11 11:38:44 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 #  include "minilibx-linux/mlx.h"
 # endif
 
-# define WIDTH 1000
-# define HEIGHT 1000
+# define WIDTH 400
+# define HEIGHT 400
 # define DEFAULT_AC 2
 # define JULIA_AC 4
 # define MANDELBROT 1

@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 00:01:45 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/06 01:17:12 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/11 11:57:43 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ int	handle_mouse(int button, int x, int y, t_fractal *frac)
 
 int	handle_close(t_fractal *frac)
 {
-	(void) frac;
+	if (frac->img.img_ptr)
+		mlx_destroy_image(frac->mlx, frac->img.img_ptr);
+	if (frac->mlx_win)
+		mlx_destroy_window(frac->mlx, frac->mlx_win);
 	exit(EXIT_SUCCESS);
 	return (0);
 }

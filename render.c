@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 16:20:21 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/10 17:04:48 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/10 20:41:26 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,15 @@ static int	get_color(int iter)
 	int	r;
 	int	g;
 	int	b;
+	int	color;
 
 	if (iter == MAX_ITER)
 		return (0x000000);
-	r = (iter * 9) % 256;
-	g = (iter * 15) % 256;
-	b = (iter * 20) % 256;
-	return ((r << 16) | (g << 8) | b);
+	r = (iter * 25) % 256;
+	g = (iter * 16) % 256;
+	b = (iter * 6) % 256;
+	color = ((r << 16) | (g << 8) | b);
+	return (color);
 }
 
 static int	pixel_to_iter(int x, int y, t_fractal *frac)

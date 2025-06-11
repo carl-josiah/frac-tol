@@ -6,7 +6,7 @@
 /*   By: ccastro <ccastro@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 20:39:17 by ccastro           #+#    #+#             */
-/*   Updated: 2025/06/10 17:45:42 by ccastro          ###   ########.fr       */
+/*   Updated: 2025/06/11 11:32:19 by ccastro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	write_error(void)
 	char	*error_message_2;
 	char	*error_message_3;
 
-	error_message_1 = "Correct usage: ./fractal <fractal name>\n";
+	error_message_1 = "Correct usage: ./fractol <fractal name>\n";
 	error_message_2 = "Available fractals: mandelbrot | ";
 	error_message_3 = "julia | julia <num1> <num2>\n";
 	write(2, error_message_1, fr_strlen(error_message_1));
